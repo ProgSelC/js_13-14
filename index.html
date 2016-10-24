@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Homework JS_13-14</title>
+</head>
+
+<body>
+    <script type="text/html" id="content-template">
+        <div class="container">
+            <div class="row">
+                <form class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-2" id="quizzForm"></form>
+                <h3 class="text-center"><%- testName %></h3>
+                <% questions.forEach(function(item) { %>
+                    <fieldset id="<%- item.id %>">
+                        <legend><%- item.text %></legend>
+                        <% item.variants.forEach(function(variant) { %>
+                        <div class="radio">
+                            <label><input type="radio" name="<%- item.id %>" value="<%- variant.value %>"><%- variant.text %></label>
+                        </div>
+                        <% }); %>
+                    </fieldset>
+                <% }); %>
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit"><%- submitText %></button>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
