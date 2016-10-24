@@ -11,7 +11,7 @@ $(function () {
         "questions":[
             {
                 "id": "q1",
-                "answer": "100",
+                "answer": "1",
                 "text": "Are you a programmer?",
                 "type": "radio",
                 "variants":[
@@ -34,7 +34,7 @@ $(function () {
             {
                 "id": "q3",
                 "answer": "1011",
-                "text": "Which results equal 0",
+                "text": "Which results are equal 0",
                 "type": "checkbox",
                 "variants":[
                     { "text": " (1 ^ 1)", "value": 1 },
